@@ -338,31 +338,31 @@ class _DashboardPageState extends State<DashboardPage> {
                               'assets/img/Lembur.png',
                               () => Navigator.pushNamed(context, '/lembur'),
                             ),
-                            // _buildMenuItem(
-                            //   'Visit',
-                            //   'assets/img/Shift.png',
-                            //   () => Navigator.pushNamed(context, '/visit'),
-                            // ),
-                            // _buildMenuItem(
-                            //   'Reimburse',
-                            //   'assets/img/Reimburse.png',
-                            //   () => Navigator.pushNamed(context, '/reimburse'),
-                            // ),
-                            // _buildMenuItem(
-                            //   'Aktivitas',
-                            //   'assets/img/Aktivitas.png',
-                            //   () => Navigator.pushNamed(context, '/aktivitas'),
-                            // ),
-                            // _buildMenuItem(
-                            //   'Berita',
-                            //   'assets/img/Berita.png',
-                            //   () => Navigator.pushNamed(context, '/Berita'),
-                            // ),
-                            // _buildMenuItem(
-                            //   'Slip Gaji',
-                            //   'assets/img/Slip-Gaji.png',
-                            //   () => Navigator.pushNamed(context, '/slip-gaji'),
-                            // ),
+                            _buildMenuItem(
+                              'Visit',
+                              'assets/img/Shift.png',
+                              () => Navigator.pushNamed(context, '/visit'),
+                            ),
+                            _buildMenuItem(
+                              'Reimburse',
+                              'assets/img/Reimburse.png',
+                              () => Navigator.pushNamed(context, '/reimburse'),
+                            ),
+                            _buildMenuItem(
+                              'Aktivitas',
+                              'assets/img/Aktivitas.png',
+                              () => Navigator.pushNamed(context, '/aktivitas'),
+                            ),
+                            _buildMenuItem(
+                              'Berita',
+                              'assets/img/Berita.png',
+                              () => Navigator.pushNamed(context, '/Berita'),
+                            ),
+                            _buildMenuItem(
+                              'Slip Gaji',
+                              'assets/img/Slip-Gaji.png',
+                              () => Navigator.pushNamed(context, '/slip-gaji'),
+                            ),
                           ],
                         ),
                       ),
