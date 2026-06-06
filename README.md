@@ -28,6 +28,9 @@ lib/
 ├── utils/
 │   └── logger.dart                 # Helper logging debug
 │
+├── services/
+│   └── offline_service.dart        # helper offline
+│
 ├── model/                          # Data model (parsing JSON dari API)
 │   ├── model_clockin.dart
 │   ├── model_clockout.dart
@@ -38,17 +41,43 @@ lib/
 │   ├── model_profile.dart
 │   └── model_visit.dart
 │
-└── View/
-    ├── pages/
-    │   ├── splash/                 # Splash screen & cek session
-    │   ├── login/                  # Halaman login + controller
-    │   ├── dashboard/              # Dashboard utama + menu izin & lembur
-    │   ├── absensi/                # Halaman absensi + clock-in
-    │   └── profile/                # Profil karyawan
-    └── components/
-        └── custom_bottom_nav.dart  # Bottom navigation bar custom
-```
-
+└── View/                               # daftar halaman
+│   ├── pages/
+│   │   ├── splash/                     # Splash screen & cek session
+│   │   │   └── splash_screen.dart
+│   │   ├── login/                      # Halaman login + controller
+│   │   │   ├── controller_login.dart   
+│   │   │   └── login_page.dart         
+│   │   ├── shift/                      # Halaman shift + controller
+│   │   │   ├── controller_shift.dart   
+│   │   │   └── shift_page.dart         
+│   │   ├── dashboard/                  # Dashboard utama + menu izin & lembur
+│   │   │   ├── menu_item/   
+│   │   │   │   ├── form_menu_item/   
+│   │   │   │   │   └── form_menu_item/   
+│   │   │   │   │      ├── controller_form_izin.dart   
+│   │   │   │   │      ├── controller_form_lembur.dart   
+│   │   │   │   │      ├── izin_form_page.dart   
+│   │   │   │   │      └── lembur_form_page.dart   
+│   │   │   │   ├── izin_page.dart   
+│   │   │   │   ├── lembur_page.dart   
+│   │   │   │   ├── controller_izin.dart   
+│   │   │   │   └── controller_lembur.dart   
+│   │   │   ├── controller_dashboard.dart   
+│   │   │   └── dashboard_page.dart         
+│   │   ├── absensi/                    # Halaman absensi + clock-in
+│   │   │   ├── clockin/
+│   │   │   │   ├── clockin_page.dart
+│   │   │   │   └── controller_clockin.dart
+│   │   │   ├── absensi_page.dart
+│   │   │   └── controller_absensi.dart
+│   │   └── profile/                    # Profil karyawan
+│   │       ├── profile_page.dart
+│   │       └── controller_profile.dart                    
+│   └── components/
+│      └── custom_bottom_nav.dart      # Bottom navigation bar custom
+│
+└── main.dart
 ---
 
 ## Persyaratan
@@ -64,13 +93,13 @@ lib/
 
 ```bash
 # 1. Clone repository
-git clone <url-repo>
+git clone https://github.com/10-Abel-01/Clockin.git
 cd clockin
 
 # 2. Install dependencies
 flutter pub get
 
-# 3. Konfigurasi base URL API
+# 3. Konfigurasi base URL API/.env
 # Edit file konfigurasi API (sesuaikan dengan IP server)
 # Contoh: http://192.168.1.x/clockin/clockin-api/public/
 
@@ -174,4 +203,4 @@ Black box testing menguji fungsionalitas aplikasi dari sisi pengguna tanpa melih
 
 | Nama | Role |
 |---|---|
-| Abel Saferyan | Mobile Developer |
+| Abel Saferyan | Kuli pemrograman (Mobile + Admin + API) |

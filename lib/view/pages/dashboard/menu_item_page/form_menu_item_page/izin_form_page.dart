@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'controller_form/controller_form_izin.dart';
+import 'controller_form_izin.dart';
 
 class IzinFormPage extends StatefulWidget {
   final Map<String, dynamic>? initialData;
