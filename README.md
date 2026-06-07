@@ -17,6 +17,18 @@ Aplikasi absensi karyawan berbasis Flutter dengan fitur clock-in/clock-out, peng
 
 ---
 
+## Diagram Sistem
+
+### Activity Diagram
+![Activity Diagram](docs/activity-diagram.pdf)
+
+### Use Case Diagram
+![Use Case Diagram](docs/usecase-diagram.pdf)
+
+### Class Diagram
+![Class Diagram](docs/class-diagram.pdf)
+
+
 ## Struktur Proyek
 
 ```
