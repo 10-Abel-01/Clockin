@@ -204,3 +204,7 @@ Black box testing menguji fungsionalitas aplikasi dari sisi pengguna tanpa melih
 | Nama | Role |
 |---|---|
 | Abel Saferyan | Kuli pemrograman (Mobile + Admin + API) |
+| Hamad Syahid | Technical Writer |
+| Hidayat Chandra | Software Tester / QA |
+| Muhammad Riski Kurniawan | UI/UX Design |
+| Raihan Lundy Arista| Database Administrator (Database Management + Database Visual Modeling) |
