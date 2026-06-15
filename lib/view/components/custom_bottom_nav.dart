@@ -98,7 +98,7 @@ class CustomBottomNav extends StatelessWidget {
               Transform.translate(
                 offset: const Offset(0, 0),
                 child: Image.asset(
-                  'assets/img/Visit.png',
+                  'assets/img/Data-Absensi.png',
                   width: 38,
                   height: 38,
                 ),
