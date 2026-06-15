@@ -39,15 +39,3 @@ class RouteApp {
     '/izin-form': (context) => IzinFormPage(),
   };
 }
-
-// <div class="malas-ngoding">
-//   <h1>Kelompok 1 Mempersembahkan</h1>
-//   <h1 style: {text="center"}>Kelompok 1 Mempersembahkan</h1>
-//   <h1 style: {text="center"}>Clockin</h1>
-//   <div class="malas-banget">
-//     <h1>Frontend dan Backend Developer: Abel Saferyan</h1>
-//     <h1>Jurnalistik/Penulis           : Hamad Syahid</h1>
-//     <h1>UI/UX Designer                : Muhammad Riski Kurniawan</h1>
-//     <h1>DataBase Architecture         : Raihan Lundy Arista</h1>
-//   </div>
-// </div>
