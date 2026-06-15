@@ -133,33 +133,37 @@ class _ProfilePageState extends State<ProfilePage> {
                         'ID Karyawan',
                         userData.idKaryawan.toString(),
                       ),
+                      _dividerItem(),
                       const SizedBox(height: 6),
                       _buildProfileItem(
                         Icons.work,
                         'Jabatan',
                         userData.jabatan?.namaJabatan ?? '-',
                       ),
+                      _dividerItem(),
                       const SizedBox(height: 6),
                       _buildProfileItem(Icons.phone, 'No Tlp', userData.noTelp),
+                      _dividerItem(),
                       const SizedBox(height: 6),
                       _buildProfileItem(Icons.email, 'Email', userData.email),
+                      _dividerItem(),
                       const SizedBox(height: 6),
                       _buildProfileItem(
                         Icons.account_balance,
                         'Rekening',
                         '${userData.bank ?? ''} - ${userData.rekening ?? ''}',
                       ),
-                      const Divider(height: 24),
-                      // ListTile(
-                      //   contentPadding: const EdgeInsets.symmetric(
-                      //     horizontal: 0,
-                      //   ),
-                      //   dense: true,
-                      //   leading: const Icon(Icons.lock),
-                      //   title: const Text('Ubah Password'),
-                      //   trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                      //   onTap: () {},
-                      // ),
+                      _dividerItem(),
+                      ListTile(
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 0,
+                        ),
+                        dense: true,
+                        leading: const Icon(Icons.lock),
+                        title: const Text('Ubah Password'),
+                        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                        onTap: () {},
+                      ),
                       ListTile(
                         contentPadding: const EdgeInsets.symmetric(
                           horizontal: 0,
@@ -228,5 +232,9 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
       ],
     );
+  }
+
+  Widget _dividerItem() {
+    return const Divider(color: Color.fromARGB(115, 170, 163, 163), thickness: 1);
   }
 }

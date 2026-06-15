@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:Clockin/view/pages/dashboard/dashboard_page.dart';
 import 'package:Clockin/view/pages/absensi/absensi_page.dart';
-// import 'package:Clockin/view/pages/visit/visit_page.dart';
 
 class CustomBottomNav extends StatelessWidget {
   final int currentIndex;
@@ -99,14 +98,14 @@ class CustomBottomNav extends StatelessWidget {
                 offset: const Offset(0, 0),
                 child: Image.asset(
                   'assets/img/Data-Absensi.png',
-                  width: 38,
-                  height: 38,
+                  width: 24,
+                  height: 24,
                 ),
               ),
               // const SizedBox(height: 1), // sama
             ],
           ),
-          label: 'Fitur Tambahan',
+          label: 'Data Absensi',
         ),
       ],
     );

@@ -339,6 +339,11 @@ class _DashboardPageState extends State<DashboardPage> {
                               () => Navigator.pushNamed(context, '/lembur'),
                             ),
                             _buildMenuItem(
+                              'Shift',
+                              'assets/img/Shift.png',
+                              () => Navigator.pushNamed(context, '/shift'),
+                            ),
+                            _buildMenuItem(
                               'Reimburse',
                               'assets/img/Reimburse.png',
                               () => Navigator.pushNamed(context, '/reimburse'),
