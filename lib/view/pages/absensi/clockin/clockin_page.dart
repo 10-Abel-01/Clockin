@@ -74,8 +74,8 @@ class _ClockInPageState extends State<ClockInPage> {
                     children: [
                       TileLayer(
                         urlTemplate:
-                            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                        subdomains: ['a', 'b', 'c'],
+                            'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                        userAgentPackageName: 'com.zynovaworks.clockin',
                       ),
                       if (controller.currentLocation != null)
                         MarkerLayer(
@@ -84,18 +84,21 @@ class _ClockInPageState extends State<ClockInPage> {
                               point: controller.currentLocation!,
                               width: 48,
                               height: 48,
-                              builder: (ctx) => GestureDetector(
-                                onTap: () {
-                                  final lat = controller.currentLocation!.latitude;
-                                  final lon = controller.currentLocation!.longitude;
-                                  controller.openMapsAt(lat, lon);
-                                },
-                                child: const Icon(
-                                  Icons.location_on,
-                                  color: Colors.red,
-                                  size: 36,
-                                ),
-                              ),
+                              builder:
+                                  (ctx) => GestureDetector(
+                                    onTap: () {
+                                      final lat =
+                                          controller.currentLocation!.latitude;
+                                      final lon =
+                                          controller.currentLocation!.longitude;
+                                      controller.openMapsAt(lat, lon);
+                                    },
+                                    child: const Icon(
+                                      Icons.location_on,
+                                      color: Colors.red,
+                                      size: 36,
+                                    ),
+                                  ),
                             ),
                           ],
                         ),
@@ -133,32 +136,34 @@ class _ClockInPageState extends State<ClockInPage> {
                   height: 200,
                   width: double.infinity,
                   color: Colors.grey[300],
-                  child: Builder(builder: (context) {
-                    // If there's a captured image, show it
-                    if (controller.selfieImage != null) {
-                      return Image.file(
-                        File(controller.selfieImage!.path),
-                        height: 200,
-                        width: double.infinity,
-                        fit: BoxFit.cover,
+                  child: Builder(
+                    builder: (context) {
+                      // If there's a captured image, show it
+                      if (controller.selfieImage != null) {
+                        return Image.file(
+                          File(controller.selfieImage!.path),
+                          height: 200,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        );
+                      }
+
+                      // If camera controller active and initialized, show preview
+                      if (controller.cameraController != null &&
+                          controller.cameraController!.value.isInitialized) {
+                        return CameraPreview(controller.cameraController!);
+                      }
+
+                      // default placeholder
+                      return const Center(
+                        child: Icon(
+                          Icons.person,
+                          size: 150,
+                          color: Colors.black54,
+                        ),
                       );
-                    }
-
-                    // If camera controller active and initialized, show preview
-                    if (controller.cameraController != null &&
-                        controller.cameraController!.value.isInitialized) {
-                      return CameraPreview(controller.cameraController!);
-                    }
-
-                    // default placeholder
-                    return const Center(
-                      child: Icon(
-                        Icons.person,
-                        size: 150,
-                        color: Colors.black54,
-                      ),
-                    );
-                  }),
+                    },
+                  ),
                 ),
               ),
               const SizedBox(height: 16),

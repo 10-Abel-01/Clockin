@@ -1,3 +1,4 @@
+// pake banyak import karna multipart/sekaligus access
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class AbsensiModel {
   final String karyawanId;
   final String? deskripsi;
 
+  // konstruktor untuk menerima semua data absensi
   AbsensiModel({
     required this.tanggalHadir,
     required this.jamAbsenMasuk,
@@ -26,7 +28,8 @@ class AbsensiModel {
     required this.karyawanId,
     this.deskripsi,
   });
-
+  
+  // metode untuk mengirim data absensi ke server
   Future<AbsensiResult> submitAbsensi(BuildContext context) async {
     try {
       final baseUrl = dotenv.env['API_URL'] ?? '';

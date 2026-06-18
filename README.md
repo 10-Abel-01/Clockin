@@ -34,16 +34,16 @@ Aplikasi absensi karyawan berbasis Flutter dengan fitur clock-in/clock-out, peng
 ```
 lib/
 ├── core/
-│   ├── routes/route_app.dart       # Konfigurasi semua named routes
-│   └── themes/app_theme.dart       # Theme, warna, dan typography global
+│   ├── routes/route_app.dart           # Konfigurasi semua named routes
+│   └── themes/app_theme.dart           # Theme, warna, dan typography global
 │
 ├── utils/
-│   └── logger.dart                 # Helper logging debug
+│   └── logger.dart                     # Helper logging debug
 │
 ├── services/
-│   └── offline_service.dart        # helper offline
+│   └── offline_service.dart            # helper offline
 │
-├── model/                          # Data model (parsing JSON dari API)
+├── model/                              # Data model (parsing JSON dari API)
 │   ├── model_clockin.dart
 │   ├── model_clockout.dart
 │   ├── model_dashboard.dart
@@ -200,6 +200,7 @@ Black box testing menguji fungsionalitas aplikasi dari sisi pengguna tanpa melih
 | TC-013 | Profil | Lihat profil | Buka halaman profil | Data profil tampil | - | - |
 | TC-014 | Logout | Logout normal | Tap logout | Kembali ke login | - | - |
 | TC-015 | Session | Token expired | Buka app setelah lama | Redirect ke login | - | - |
+
 
 ---
 
