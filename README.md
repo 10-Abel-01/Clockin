@@ -221,3 +221,5 @@ Black box testing menguji fungsionalitas aplikasi dari sisi pengguna tanpa melih
 | Hidayat Chandra | Software Tester / QA |
 | Muhammad Riski Kurniawan | UI/UX Design |
 | Raihan Lundy Arista| Database Administrator (Database Management + Database Visual Modeling) |
+
+demo aplikasi akan segera dibuat.
